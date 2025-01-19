@@ -1,0 +1,76 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    justify-content: space-between;
+}
+
+.navbar h1 {
+    font-size: 24px;
+}
+
+/* Mystery Box Section */
+.mystery-box-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.box {
+    width: 30%;
+    height: 300px;
+    background-color: #d3d3d3;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Box Hover Effects */
+.box:hover {
+    transform: scale(1.05);
+    background-color: #ccc;
+}
+
+/* Specific Box Colors (Optional) */
+.legendary-box {
+    background-color: #ffd700; /* Gold */
+}
+
+.epic-box {
+    background-color: #9370db; /* Purple */
+}
+
+.rare-box {
+    background-color: #add8e6; /* Light Blue */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mystery-box-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .box {
+        width: 80%;
+    }
+}
