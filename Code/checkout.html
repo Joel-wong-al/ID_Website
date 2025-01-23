@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="menu-icon">☰</div>
+        <div class="icons">
+            <i class="user-icon">👤</i>
+            <div class="cart-icon">🛒</div>
+        </div>
+    </div>
+
+    <!-- Slide-out Menu -->
+    <div class="menu hidden">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="mysterybox.html">Mystery Box</a>
+        <a href="about.html">About Us</a>
+        <a href="account.html">Account</a>
+    </div>
+    
+    <!-- Checkout Steps -->
+    <div class="checkout-steps">
+        <span class="step active">1. Delivery</span>
+        <span class="step">2. Payment</span>
+        <span class="step">3. Review</span>
+    </div>
+
+    <!-- Checkout Form -->
+    <main>
+        <!-- Delivery Details Section -->
+        <section id="delivery">
+            <h1>Checkout</h1>
+            <h2>Delivery Details</h2>
+            <form>
+                <label for="first-name">First Name*</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Last Name*</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="contact">Phone/Email*</label>
+                <input type="text" id="contact" name="contact" required>
+
+                <label for="country">Country Name*</label>
+                <input type="text" id="country" name="country" required>
+
+                <label for="address">Address*</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">Town/City (optional)</label>
+                <input type="text" id="city" name="city">
+
+                <button type="button" class="next-btn">Next</button>
+            </form>
+        </section>
+
+        <!-- Payment Section -->
+        <section id="payment" class="hidden">
+            <h1>Checkout</h1>
+            <h2>Choose a payment method</h2>
+            <form>
+                <button type="button" class="payment-option">Master Card</button>
+                <button type="button" class="payment-option">Visa</button>
+                <button type="button" class="payment-option">Cash</button>
+
+                <div class="payment-details hidden">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number">
+
+                    <label for="card-holder">Card Holder Name</label>
+                    <input type="text" id="card-holder" name="card-holder">
+
+                    <label for="expiry">Expire Date</label>
+                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
+
+                    <label for="cvc">CVC</label>
+                    <input type="text" id="cvc" name="cvc">
+                </div>
+
+                <button type="button" class="next-btn">Next</button>
+            </form>
+        </section>
+
+        <!-- Review Section -->
+        <section id="review" class="hidden">
+            <h1>Checkout</h1>
+            <h2>Review Your Order</h2>
+            <div class="order-summary">
+                <p>Delivery to: <span id="summary-address"></span></p>
+                <p>Payment Method: <span id="summary-payment"></span></p>
+                <p>Total: <strong>$XX.XX</strong></p>
+            </div>
+            <button type="submit" class="confirm-btn">Confirm Order</button>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <footer>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="search.html">Search</a>
+            <a href="cart.html">Cart</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+</html>
