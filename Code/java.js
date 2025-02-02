@@ -26,3 +26,28 @@ function toggleMenu() {
       menu.classList.remove('active');
     });
   });
+
+  let currentSlide = 0;
+const slides = document.querySelectorAll(".carousel-slide");
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+        dots[i].classList.toggle("active", i === index);
+    });
+}
+
+function moveToSlide(index) {
+    currentSlide = index;
+    showSlide(currentSlide);
+}
+
+// Auto-slide function
+function autoSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Set interval for auto sliding every 5 seconds
+setInterval(autoSlide, 5000);
