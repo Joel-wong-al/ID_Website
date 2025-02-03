@@ -109,7 +109,7 @@ body {
 
 .search-bar button {
     padding: 10px 15px;
-    background-color: #ff69b4; /* Pink */
+    background-color: #E7E1B6; /* Light Yellow */
     border: none;
     border-radius: 0 4px 4px 0;
     color: #fff;
@@ -119,7 +119,7 @@ body {
 }
 
 .search-bar button:hover {
-    background-color: #ff85c5; /* Lighter pink */
+    background-color: #D6C99F; /* Darker Yellow */
 }
 
 /* Section Styling */
@@ -131,7 +131,7 @@ body {
 h2 {
     margin: 20px 0 10px;
     font-size: 24px;
-    color: #ff69b4; /* Pink */
+    color: #E7E1B6; /* Light Yellow */
 }
 
 .product-list {
@@ -175,31 +175,6 @@ h2 {
     color: #ddd;
 }
 
-/* Footer Navigation */
-footer {
-    width: 100%;
-    background-color: #222;
-    padding: 15px 0;
-    position: fixed;
-    bottom: 0;
-}
-
-footer nav {
-    display: flex;
-    justify-content: space-around;
-}
-
-footer nav a {
-    color: #fff;
-    font-size: 16px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer nav a:hover {
-    color: #ff69b4;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .product-card {
@@ -209,4 +184,24 @@ footer nav a:hover {
     .search-bar input {
         width: 70%;
     }
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #E7E1B6;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    color: #222;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    font-weight: bold;
 }

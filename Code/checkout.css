@@ -109,7 +109,7 @@ body {
 
 .step.active {
     color: #fff;
-    border-bottom: 2px solid #ff69b4; /* Pink highlight for the active step */
+    border-bottom: 2px solid #E7E1B6; /* Yellow highlight for the active step */
 }
 
 /* Main Content Styling */
@@ -125,7 +125,7 @@ h1 {
     font-size: 28px;
     text-align: center;
     margin-bottom: 20px;
-    color: #ff69b4; /* Pink */
+    color: #E7E1B6; /* Pink */
 }
 
 h2 {
@@ -161,7 +161,7 @@ input::placeholder {
 
 button {
     padding: 10px 15px;
-    background-color: #ff69b4; /* Pink */
+    background-color: #E7E1B6; /* Yellow */
     color: #fff;
     font-size: 16px;
     font-weight: bold;
@@ -172,7 +172,7 @@ button {
 }
 
 button:hover {
-    background-color: #ff85c5; /* Lighter pink on hover */
+    background-color: #D6C99F; /* Darker Yellow on hover */
 }
 
 .payment-option {
@@ -190,31 +190,6 @@ button:hover {
     display: none;
 }
 
-/* Footer Navigation */
-footer {
-    width: 100%;
-    background-color: #222;
-    padding: 15px 0;
-    position: fixed;
-    bottom: 0;
-}
-
-footer nav {
-    display: flex;
-    justify-content: space-around;
-}
-
-footer nav a {
-    color: #fff;
-    font-size: 16px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer nav a:hover {
-    color: #ff69b4;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     main {
@@ -224,4 +199,24 @@ footer nav a:hover {
     footer nav a {
         font-size: 14px;
     }
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #E7E1B6;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    color: #222;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    font-weight: bold;
 }

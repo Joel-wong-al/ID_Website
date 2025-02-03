@@ -93,7 +93,7 @@ body {
 .account-header {
     width: 100%;
     padding: 20px;
-    background-color: #ff69b4; /* Pink background */
+    background-color: #E7E1B6; /* Yellow background */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,7 +143,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #ff69b4; /* Pink for headings */
+    color: #E7E1B6; /* Yellow for headings */
 }
 
 .section .detail {
@@ -159,31 +159,6 @@ body {
 .section .detail p {
     font-size: 14px;
     margin-bottom: 5px;
-}
-
-/* Footer Navigation */
-footer {
-    width: 100%;
-    background-color: #222;
-    padding: 15px 0;
-    position: fixed;
-    bottom: 0;
-}
-
-footer nav {
-    display: flex;
-    justify-content: space-around;
-}
-
-footer nav a {
-    color: #fff;
-    font-size: 16px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer nav a:hover {
-    color: #ff69b4;
 }
 
 /* Responsive Design */
@@ -208,4 +183,24 @@ footer nav a:hover {
     .account-sections {
         width: 95%;
     }
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #E7E1B6;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    color: #222;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    font-weight: bold;
 }
