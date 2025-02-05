@@ -104,41 +104,64 @@ document.addEventListener("DOMContentLoaded", function () {
 // ==============================
 
 document.addEventListener("DOMContentLoaded", function () {
-  const steps = document.querySelectorAll(".step"); // Step indicators
-  const sections = document.querySelectorAll(".checkout-section"); // Checkout form sections
-  const nextButtons = document.querySelectorAll(".next-btn"); // "Next" buttons
-  let currentStep = 0;
+    // Select all checkout step indicators (1. Delivery, 2. Payment, 3. Review)
+    const steps = document.querySelectorAll(".step");
 
-  // Function to show the selected checkout section
-  function showStep(index) {
-      sections.forEach((section, i) => {
-          if (i === index) {
-              section.classList.add("active");
-              steps[i].classList.add("active");
-          } else {
-              section.classList.remove("active");
-              steps[i].classList.remove("active");
-          }
-      });
-      currentStep = index;
-  }
+    // Select all checkout sections (Delivery, Payment, Review)
+    const sections = document.querySelectorAll(".checkout-section");
 
-  // Allow users to click step navigation (1. Delivery, 2. Payment, 3. Review)
-  steps.forEach((step, index) => {
-      step.addEventListener("click", () => {
-          showStep(index);
-      });
-  });
+    // Select all "Next" buttons in each section
+    const nextButtons = document.querySelectorAll(".next-btn");
 
-  // "Next" button moves to the next step
-  nextButtons.forEach((button, index) => {
-      button.addEventListener("click", () => {
-          if (index < sections.length - 1) {
-              showStep(index + 1);
-          }
-      });
-  });
+    let currentStep = 0; // Track the current checkout step
 
-  // Show the first step by default
-  showStep(0);
+    /**
+     * Function to show the corresponding checkout step
+     * @param {number} index - The step index (0: Delivery, 1: Payment, 2: Review)
+     */
+    function showStep(index) {
+        // Loop through all sections and show only the selected one
+        sections.forEach((section, i) => {
+            section.style.display = i === index ? "block" : "none";
+        });
+
+        // Highlight the active step in the progress bar
+        steps.forEach((step, i) => {
+            step.classList.toggle("active", i === index);
+        });
+
+        currentStep = index; // Update the current step
+    }
+
+    /**
+     * Event listener to allow clicking on the steps (1, 2, 3) to navigate
+     */
+    steps.forEach((step, index) => {
+        step.addEventListener("click", () => {
+            showStep(index); // Show the selected step when clicked
+        });
+    });
+
+    /**
+     * Event listener for "Next" buttons to move to the next step
+     */
+    nextButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            if (index < sections.length - 1) {
+                showStep(index + 1); // Move to the next step
+            }
+        });
+    });
+
+    /**
+     * Simulated Payment Handling - This will show an alert and move to "Review" step
+     */
+    document.getElementById("pay-now-btn").addEventListener("click", function () {
+        alert("Payment processing... (Simulation)"); // Simulate a payment process
+        showStep(2); // Move to "3. Review" after clicking "Pay Now"
+    });
+
+    // Show the first step (Delivery) when the page loads
+    showStep(0);
 });
+

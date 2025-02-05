@@ -19,7 +19,6 @@
         </div>
     </div>
 
-
     <!-- Slide-out Menu -->
     <div class="menu hidden">
         <a href="index.html">Home</a>
@@ -31,14 +30,15 @@
 
     <!-- Checkout Steps -->
     <div class="checkout-steps">
-        <span class="step active">1. Delivery</span>
-        <span class="step">2. Payment</span>
-        <span class="step">3. Review</span>
+        <span class="step active" data-step="0">1. Delivery</span>
+        <span class="step" data-step="1">2. Payment</span>
+        <span class="step" data-step="2">3. Review</span>
     </div>
 
     <main class="checkout-container">
-        <!-- Left Section: Contact & Shipping -->
-        <section class="checkout-details">
+        
+        <!-- Step 1: Delivery Details -->
+        <section class="checkout-section active" id="delivery-section">
             <h2>Contact Information</h2>
             <p>Already a member? <a href="#">Sign in</a></p>
 
@@ -74,8 +74,47 @@
                     </select>
                 </div>
 
-                <button type="button" class="next-btn">Continue to Payment</button>
+                <button type="button" class="next-btn" data-next="1">Continue to Payment</button>
             </form>
+        </section>
+
+        <!-- Step 2: Payment -->
+        <section class="checkout-section" id="payment">
+            <h2>Payment Details</h2>
+            <form id="payment-form">
+                <label for="card-name">Cardholder Name*</label>
+                <input type="text" id="card-name" name="card-name" required placeholder="Full Name on Card">
+
+                <label for="card-number">Card Number*</label>
+                <input type="text" id="card-number" name="card-number" required placeholder="4242 4242 4242 4242">
+
+                <div class="payment-grid">
+                    <div>
+                        <label for="expiry-date">Expiry Date*</label>
+                        <input type="text" id="expiry-date" name="expiry-date" required placeholder="MM/YY">
+                    </div>
+                    <div>
+                        <label for="cvc">CVC*</label>
+                        <input type="text" id="cvc" name="cvc" required placeholder="123">
+                    </div>
+                </div>
+
+                <button type="button" id="pay-now-btn">Pay Now</button>
+            </form>
+        </section>
+
+
+        <!-- Step 3: Order Review -->
+        <section class="checkout-section hidden" id="review-section">
+            <h2>Review Your Order</h2>
+            
+            <div class="order-summary">
+                <p>Shipping to: <span id="summary-address"></span></p>
+                <p>Payment Method: <span id="summary-payment"></span></p>
+                <p>Total: <strong>$99.00</strong></p>
+            </div>
+
+            <button type="submit" class="confirm-btn">Confirm Order</button>
         </section>
 
         <!-- Right Section: Order Summary -->
@@ -112,3 +151,4 @@
     <script src="java.js"></script>
 </body>
 </html>
+
