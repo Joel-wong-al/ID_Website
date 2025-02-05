@@ -1,10 +1,14 @@
-
-/* General Reset */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
 }
 
 /* Navigation Bar */
@@ -39,17 +43,14 @@
     z-index: 1000;
 }
 
-/* Hidden state */
 .hidden {
     transform: translateX(-100%);
 }
 
-/* Active state */
 .active {
     transform: translateX(0);
 }
 
-/* Menu Links */
 .menu a {
     text-decoration: none;
     color: black;
@@ -62,23 +63,17 @@
     color: #555;
 }
 
-/* Main Content */
-.content {
-    padding: 20px;
-    text-align: center;
-}
 /* Body Styling */
 body {
     background-color: #000; /* Black background */
     color: #fff; /* White text */
-    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
 }
 
-/* Navbar Styling */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -89,10 +84,10 @@ body {
     color: #fff;
 }
 
-/* Checkout Steps Progress Bar */
+/* Checkout Steps */
 .checkout-steps {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     background-color: #444;
     padding: 10px 0;
@@ -105,33 +100,41 @@ body {
     color: #aaa;
     font-size: 16px;
     font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;
 }
 
 .step.active {
     color: #fff;
-    border-bottom: 2px solid #E7E1B6; /* Yellow highlight for the active step */
+    border-bottom: 3px solid #E7E1B6; /* Yellow highlight */
 }
 
-/* Main Content Styling */
-main {
-    width: 50%; /* Adjust for desktop layout */
+/* Checkout Container (Two-Column Layout) */
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 50px;
+}
+
+/* Left Section: Contact & Shipping */
+.checkout-details {
+    flex: 2;
     background-color: #222;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #E7E1B6; /* Pink */
+.checkout-details h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
-h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #fff;
+.checkout-details p {
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
 /* Form Styling */
@@ -146,23 +149,46 @@ label {
     color: #aaa;
 }
 
-input {
-    padding: 10px;
+/* Input & Select Fields */
+input, select {
+    padding: 12px;
     font-size: 14px;
     border: 1px solid #555;
     border-radius: 4px;
     background-color: #333;
     color: #fff;
+    width: 100%;
 }
 
 input::placeholder {
     color: #888;
 }
 
-button {
-    padding: 10px 15px;
-    background-color: #E7E1B6; /* Yellow */
-    color: #fff;
+/* Phone Input Group */
+.phone-input {
+    display: flex;
+    gap: 10px;
+}
+
+.phone-input select {
+    width: 30%;
+}
+
+/* Grid Layout for Shipping Fields */
+.shipping-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.shipping-grid input, .shipping-grid select {
+    flex: 1;
+}
+
+/* Next Button */
+.next-btn {
+    padding: 12px;
+    background-color: #E7E1B6;
+    color: #222;
     font-size: 16px;
     font-weight: bold;
     border: none;
@@ -171,37 +197,89 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #D6C99F; /* Darker Yellow on hover */
+.next-btn:hover {
+    background-color: #D6C99F;
 }
 
-.payment-option {
+/* Right Section: Order Summary */
+.order-summary {
+    flex: 1;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.order-summary h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Order Items */
+.order-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.order-item img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+/* Order Item Details */
+.item-details {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-details p {
+    font-size: 14px;
+}
+
+.item-details span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Order Totals */
+.summary-totals {
+    margin-top: 15px;
+}
+
+.summary-totals p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.summary-totals .total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Voucher Button */
+.apply-voucher {
+    width: 100%;
+    padding: 10px;
     background-color: #333;
-    border: 1px solid #555;
-    margin-bottom: 10px;
+    color: #E7E1B6;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
-.payment-option:hover {
+.apply-voucher:hover {
     background-color: #444;
 }
 
-/* Hidden Sections */
-.hidden {
-    display: none;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    main {
-        width: 90%; /* Adjust for smaller screens */
-    }
-
-    footer nav a {
-        font-size: 14px;
-    }
-}
-
-/* Bottom Navigation Bar */
+/* Bottom Navigation */
 .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -219,4 +297,15 @@ button:hover {
     color: #222;
     font-size: 18px;
     font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .checkout-container {
+        flex-direction: column;
+    }
+
+    .checkout-details, .order-summary {
+        width: 100%;
+    }
 }
