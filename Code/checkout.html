@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="checkout.css">
 </head>
 <body>
+
     <!-- Navigation Bar -->
     <div class="navbar">
         <div class="menu-icon">☰</div>
         <div class="icons">
             <i class="user-icon">👤</i>
-            <div class="cart-icon">🛒</div>
+            <a href="checkout.html">
+                <div class="cart-icon">🛒</div>
+            </a>
         </div>
     </div>
+
 
     <!-- Slide-out Menu -->
     <div class="menu hidden">
@@ -24,7 +28,7 @@
         <a href="about.html">About Us</a>
         <a href="account.html">Account</a>
     </div>
-    
+
     <!-- Checkout Steps -->
     <div class="checkout-steps">
         <span class="step active">1. Delivery</span>
@@ -32,72 +36,67 @@
         <span class="step">3. Review</span>
     </div>
 
-    <!-- Checkout Form -->
-    <main>
-        <!-- Delivery Details Section -->
-        <section id="delivery">
-            <h1>Checkout</h1>
-            <h2>Delivery Details</h2>
+    <main class="checkout-container">
+        <!-- Left Section: Contact & Shipping -->
+        <section class="checkout-details">
+            <h2>Contact Information</h2>
+            <p>Already a member? <a href="#">Sign in</a></p>
+
             <form>
-                <label for="first-name">First Name*</label>
-                <input type="text" id="first-name" name="first-name" required>
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
 
-                <label for="last-name">Last Name*</label>
-                <input type="text" id="last-name" name="last-name" required>
-
-                <label for="contact">Phone/Email*</label>
-                <input type="text" id="contact" name="contact" required>
-
-                <label for="country">Country Name*</label>
-                <input type="text" id="country" name="country" required>
-
-                <label for="address">Address*</label>
-                <input type="text" id="address" name="address" required>
-
-                <label for="city">Town/City (optional)</label>
-                <input type="text" id="city" name="city">
-
-                <button type="button" class="next-btn">Next</button>
-            </form>
-        </section>
-
-        <!-- Payment Section -->
-        <section id="payment" class="hidden">
-            <h1>Checkout</h1>
-            <h2>Choose a payment method</h2>
-            <form>
-                <button type="button" class="payment-option">Master Card</button>
-                <button type="button" class="payment-option">Visa</button>
-                <button type="button" class="payment-option">Cash</button>
-
-                <div class="payment-details hidden">
-                    <label for="card-number">Card Number</label>
-                    <input type="text" id="card-number" name="card-number">
-
-                    <label for="card-holder">Card Holder Name</label>
-                    <input type="text" id="card-holder" name="card-holder">
-
-                    <label for="expiry">Expire Date</label>
-                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
-
-                    <label for="cvc">CVC</label>
-                    <input type="text" id="cvc" name="cvc">
+                <label for="phone">Phone Number*</label>
+                <div class="phone-input">
+                    <select id="country-code">
+                        <option value="+65">+65</option>
+                        <option value="+1">+1</option>
+                        <option value="+44">+44</option>
+                    </select>
+                    <input type="text" id="phone" name="phone" required placeholder="Enter phone number">
                 </div>
 
-                <button type="button" class="next-btn">Next</button>
+                <h2>Shipping Address</h2>
+                <div class="shipping-grid">
+                    <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                </div>
+
+                <input type="text" id="address1" name="address1" placeholder="Address Line 1" required>
+                <input type="text" id="address2" name="address2" placeholder="Address Line 2 (optional)">
+
+                <div class="shipping-grid">
+                    <input type="text" id="postal-code" name="postal-code" placeholder="Postal Code" required>
+                    <select id="country">
+                        <option value="Singapore">Singapore</option>
+                        <option value="United States">United States</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                    </select>
+                </div>
+
+                <button type="button" class="next-btn">Continue to Payment</button>
             </form>
         </section>
 
-        <!-- Review Section -->
-        <section id="review" class="hidden">
-            <h1>Checkout</h1>
-            <h2>Review Your Order</h2>
-            <div class="order-summary">
-                <p>Delivery to: <span id="summary-address"></span></p>
-                <p>Payment Method: <span id="summary-payment"></span></p>
-                <p>Total: <strong>$XX.XX</strong></p>
+        <!-- Right Section: Order Summary -->
+        <section class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="order-item">
+                <img src="images/product-sample.jpg" alt="Product">
+                <div class="item-details">
+                    <p>iPhone 14 Pro Case</p>
+                    <span>$99.00</span>
+                </div>
             </div>
-            <button type="submit" class="confirm-btn">Confirm Order</button>
+
+            <div class="summary-totals">
+                <p>Subtotal: <span>$99.00</span></p>
+                <p>Shipping: <span>Free</span></p>
+                <hr>
+                <p class="total">Total: <span>$99.00</span></p>
+            </div>
+
+            <button class="apply-voucher">Redeem PR points</button>
         </section>
     </main>
 
