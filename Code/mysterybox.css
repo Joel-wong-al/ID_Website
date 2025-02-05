@@ -1,9 +1,14 @@
-/* General Reset */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
 }
 
 /* Navigation Bar */
@@ -29,7 +34,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #ffffff;
+    background-color: #d3d3d3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,17 +43,14 @@
     z-index: 1000;
 }
 
-/* Hidden state */
 .hidden {
     transform: translateX(-100%);
 }
 
-/* Active state */
 .active {
     transform: translateX(0);
 }
 
-/* Menu Links */
 .menu a {
     text-decoration: none;
     color: black;
@@ -61,78 +63,7 @@
     color: #555;
 }
 
-/* Mystery Box Section */
-.mystery-box-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    background-color: #000000;
-}
-
-.mystery-box {
-    width: 30%;
-    height: 300px;
-    background-color: #000000;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-/* Hover Effects */
-.mystery-box:hover {
-    transform: scale(1.05);
-    background-color: #ccc;
-}
-
-/* Rarity Colors */
-.legendary {
-    background-color: #ffd700; /* Gold */
-}
-
-.epic {
-    background-color: #9370db; /* Purple */
-}
-
-.rare {
-    background-color: #add8e6; /* Light Blue */
-}
-
-/* Set the entire body background to black */
-body {
-    background-color: #000000;
-    color: white; /* Ensure text is readable */
-}
-
-/* Ensure the bottom navigation matches the new black background */
-.bottom-nav {
-    background: #000000;
-}
-
-/* Update the slide-out menu background to black */
-.menu {
-    background-color: #000000;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .mystery-box-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .mystery-box {
-        width: 80%;
-    }
-}
-
-/* Bottom Navigation Bar */
+/* Bottom Navigation Bar - Fix Visibility */
 .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -141,8 +72,10 @@ body {
     background: #E7E1B6;
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
+    align-items: center;
+    padding: 15px 0;
     color: #222;
+    border-top: 3px solid #555; /* Add subtle border for contrast */
 }
 
 .bottom-nav a {
@@ -150,4 +83,123 @@ body {
     color: #222;
     font-size: 18px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bottom-nav a:hover {
+    color: black;
+}
+
+/* Mystery Box Section */
+.mystery-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px; /* Increased spacing between boxes */
+    padding: 80px 20px;
+    flex-wrap: wrap; /* Allow responsive wrapping */
+    max-width: 90%;
+    margin: auto;
+}
+
+/* Enlarged Mystery Boxes */
+.mystery-box {
+    width: 600px;  /* Increased width */
+    height: 600px; /* Increased height */
+    background-color: black;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2); /* Glow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.mystery-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Default Box Image */
+.box-default {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover Box Image */
+.box-hover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    position: absolute;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+}
+
+/* Show image on hover */
+.mystery-box:hover .box-default {
+    opacity: 0;
+}
+
+.mystery-box:hover .box-hover {
+    opacity: 1;
+}
+
+/* Rarity Colors */
+.legendary {
+    background-color: #ffd700;
+}
+
+.epic {
+    background-color: #9370db;
+}
+
+.rare {
+    background-color: #add8e6;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .mystery-box-container {
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    
+    .mystery-box {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .mystery-box-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .mystery-box {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mystery-box-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mystery-box {
+        width: 300px;
+        height: 300px;
+    }
 }

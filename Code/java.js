@@ -32,6 +32,39 @@ menuLinks.forEach(link => {
 });
 
 // ==============================
+// Daily Log-in (Home Page)
+// ==============================
+
+document.addEventListener("DOMContentLoaded", function () {
+    const rewards = document.querySelectorAll(".reward");
+    let unlockedDays = JSON.parse(localStorage.getItem("unlockedDays")) || [1, 2, 3]; // Initially unlocked days
+
+    function updateRewardsUI() {
+        rewards.forEach((reward, index) => {
+            const day = index + 1;
+            if (unlockedDays.includes(day)) {
+                reward.classList.add("unlocked");
+                reward.classList.remove("locked");
+                reward.innerHTML = `Day ${day} ✔`;
+            }
+        });
+    }
+
+    rewards.forEach(reward => {
+        reward.addEventListener("click", function () {
+            const day = parseInt(this.dataset.day);
+            if (!unlockedDays.includes(day) && unlockedDays.includes(day - 1)) {
+                unlockedDays.push(day);
+                localStorage.setItem("unlockedDays", JSON.stringify(unlockedDays));
+                window.location.href = `reward_day${day}.html`; // Redirect to reward page
+            }
+        });
+    });
+
+    updateRewardsUI();
+});
+
+// ==============================
 // Carousel (Home Page)
 // ==============================
 
@@ -61,43 +94,6 @@ function autoSlide() {
 
 // Set interval for auto sliding every 5 seconds
 setInterval(autoSlide, 5000);
-
-// ==============================
-// Checkout Page (Step-by-Step Navigation)
-// ==============================
-
-document.addEventListener("DOMContentLoaded", function () {
-  const steps = document.querySelectorAll(".step"); // Step indicators (1. Delivery, 2. Payment, 3. Review)
-  const sections = document.querySelectorAll(".checkout-section"); // Checkout form sections
-  const nextButtons = document.querySelectorAll(".next-btn"); // "Next" buttons
-
-  let currentStep = 0;
-
-  // Function to show the selected checkout step
-  function showStep(index) {
-      sections.forEach((section, i) => {
-          section.style.display = i === index ? "block" : "none"; // Show only the active step
-      });
-
-      steps.forEach((stepElement, i) => {
-          stepElement.classList.toggle("active", i === index); // Highlight the active step
-      });
-
-      currentStep = index;
-  }
-
-  // Next button functionality (moves to the next step)
-  nextButtons.forEach((button, index) => {
-      button.addEventListener("click", function () {
-          if (index < sections.length - 1) {
-              showStep(index + 1);
-          }
-      });
-  });
-
-  // Initialize with the first step
-  showStep(currentStep);
-});
 
 // ==============================
 // Checkout Page (Step Navigation Clickable)

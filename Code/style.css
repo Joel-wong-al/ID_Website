@@ -63,40 +63,63 @@ body {
     color: #555;
 }
 
-/* 7-Day Login Reward */
+/* 7-Day Login Rewards */
 .login-reward {
-    background: #E7E1B6;
-    color: #222;
+    background: url('images/EvaBackground.jpg') no-repeat center center/cover;
     padding: 15px;
     text-align: center;
-    margin: 10px;
     border-radius: 10px;
 }
 
 .reward-tracker {
     display: flex;
-    justify-content: space-between;
-    gap: 5px;
-    margin-top: 10px;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 10px;
 }
 
 .reward {
-    flex: 1;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    border-radius: 5px;
+    width: 80px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.reward img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.reward span {
+    position: absolute;
+    bottom: 5px;
+    color: white;
     font-weight: bold;
+    font-size: 12px;
 }
 
-.unlocked {
-    background: #fff;
-    color: #222;
+.reward:hover {
+    transform: scale(1.1);
 }
 
-.locked {
-    background: #777;
-    color: #fff;
+/* Locked rewards have lower opacity */
+.reward.locked img {
+    opacity: 0.5;
 }
+
+/* Unlocked rewards stand out */
+.reward.unlocked img {
+    border: 2px solid gold;
+}
+
 
 /* Carousel for Featured Sections */
 .featured-sections {
