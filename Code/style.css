@@ -11,6 +11,33 @@ body {
     color: #fff;
 }
 
+/* Centered Home Logo */
+.home-logo-container {
+    position: absolute;
+    top: -50px;  
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Bigger Logo */
+.home-logo {
+    height: 160px;  /* Increased size */
+    width: auto;
+    max-width: 350px; /* Allows for responsiveness */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.home-logo:hover {
+    transform: scale(1.1);
+}
+
+
 /* Navigation Bar */
 .navbar {
     display: flex;
