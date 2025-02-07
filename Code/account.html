@@ -37,7 +37,7 @@
     <!-- Account Page Header -->
     <header class="account-header">
         <div class="profile-picture">
-            <img src="path-to-profile-image.jpg" alt="Profile Picture">
+            <img src="https://i.pinimg.com/736x/a8/4a/a3/a84aa310f33862e53c30f55bdf94b013.jpg" alt="Profile Picture">
         </div>
         <div class="user-info">
             <h2>James Ong</h2>
@@ -47,50 +47,54 @@
 
     <!-- Account Sections -->
     <main class="account-sections">
-        <div class="section">
-            <h3>👤 Personal Detail</h3>
-            <div class="detail">
-                <p><strong>Name:</strong> James Ong</p>
-                <p><strong>Email:</strong> jamesong@gmail.com</p>
-                <p><strong>Number:</strong> +65 8465 3475</p>
-                <p><strong>Address:</strong> 88 Bukit Panjang</p>
+        <form class="edit-account-form">
+            <label for="username">Username*</label>
+            <input type="text" id="username" value="KakashiHatake" required>
+            
+            <div class="name-fields">
+                <div class="first-name">
+                    <label for="first-name">First Name*</label>
+                    <input type="text" id="first-name" value="Kakashi" required>
+                </div>
+                <div class="last-name">
+                    <label for="last-name">Last Name*</label>
+                    <input type="text" id="last-name" value="Hatake" required>
+                </div>
             </div>
-        </div>
 
-        <div class="section">
-            <h3>🔒 Password</h3>
-            <div class="detail">
-                <p>Change your password here</p>
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" value="joelwongwanhao@gmail.com" required>
+            
+            <label for="phone">Phone Number*</label>
+            <div class="phone-input">
+                <select>
+                    <option>+65</option>
+                </select>
+                <input type="text" id="phone" placeholder="Phone number" required>
             </div>
-        </div>
 
-        <div class="section">
-            <h3>📍 Location</h3>
-            <div class="detail">
-                <p>Manage your preferred locations</p>
-            </div>
-        </div>
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option>-</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Non-binary</option>
+                <option>Prefer not to answer</option>
+            </select>
+            
+            <label for="dob">Month Of Birth</label>
+            <input type="text" id="dob" placeholder="Month Of Birth">
+            <p class="note">This information is only used for issuing Birthday Offers. Each member is allowed to update the month of birth once.</p>
 
-        <div class="section">
-            <h3>🌐 Language</h3>
-            <div class="detail">
-                <p>Set your preferred language</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>📤 Share the App</h3>
-            <div class="detail">
-                <p>Share our app with friends</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>🚪 Log Out</h3>
-            <div class="detail">
-                <p>Log out from your account</p>
-            </div>
-        </div>
+            <label for="current-password">Current Password*</label>
+            <input type="password" id="current-password" required>
+            
+            <label for="new-password">New Password*</label>
+            <input type="password" id="new-password" required>
+            
+            <label for="confirm-password">Confirm Password*</label>
+            <input type="password" id="confirm-password" required>
+        </form>
     </main>
 
     <!-- Bottom Navigation -->
