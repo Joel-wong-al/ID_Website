@@ -92,10 +92,12 @@ body {
 
 /* 7-Day Login Rewards */
 .login-reward {
-    background: url('images/EvaBackground.jpg') no-repeat center center/cover;
+    background: url('images/DailyLogIn.jpg') no-repeat center center/cover;
     padding: 15px;
     text-align: center;
     border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .reward-tracker {
@@ -105,6 +107,7 @@ body {
     padding: 10px;
 }
 
+/* General reward box styling */
 .reward {
     display: flex;
     flex-direction: column;
@@ -117,14 +120,22 @@ body {
     padding: 10px;
     position: relative;
     transition: transform 0.2s ease;
+    background-size: cover;
+    background-position: center;
 }
 
-.reward img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+/* Unlocked rewards (Day 1-3) */
+.reward.unlocked:nth-child(1) { background-image: url('images/EvaHead.png'); }
+.reward.unlocked:nth-child(2) { background-image: url('images/EvaHead.png'); }
+.reward.unlocked:nth-child(3) { background-image: url('images/WhiteEva.png'); }
+
+/* Locked rewards (Day 4-7) */
+.reward.locked { 
+    background-image: url('images/EvaBackgroundNice.jpg'); 
+    opacity: 0.5; /* Slightly faded */
 }
 
+/* Styling for the text inside */
 .reward span {
     position: absolute;
     bottom: 5px;
@@ -133,20 +144,10 @@ body {
     font-size: 12px;
 }
 
+/* Hover Effect */
 .reward:hover {
     transform: scale(1.1);
 }
-
-/* Locked rewards have lower opacity */
-.reward.locked img {
-    opacity: 0.5;
-}
-
-/* Unlocked rewards stand out */
-.reward.unlocked img {
-    border: 2px solid gold;
-}
-
 
 /* Carousel for Featured Sections */
 .featured-sections {
