@@ -254,3 +254,55 @@ function loadPopularProducts(products) {
         container.appendChild(productCard);
     });
 }
+
+// ==============================
+// Mystery Box Click Handling
+// ==============================
+
+document.addEventListener("DOMContentLoaded", function () {
+    const mysteryBoxes = document.querySelectorAll(".mystery-box");
+
+    mysteryBoxes.forEach(box => {
+        box.addEventListener("click", function () {
+            const boxId = this.getAttribute("data-id"); // Ensure this attribute exists
+            window.location.href = `mysteryboxdetails.html?id=${boxId}`;
+        });
+    });
+
+    // Check if on mystery box details page
+    if (window.location.pathname.includes("mysteryboxdetails.html")) {
+        loadMysteryBoxDetails();
+    }
+});
+
+// ==============================
+// Fetch Mystery Box Details from JSON
+// ==============================
+
+function loadMysteryBoxDetails() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const boxId = urlParams.get("id");
+
+    fetch("mysteryboxes.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            const mysteryBox = data.mystery_boxes.find(box => box.id == boxId);
+
+            if (mysteryBox) {
+                document.getElementById("mysterybox-image").src = mysteryBox.image;
+                document.getElementById("mysterybox-name").textContent = mysteryBox.name;
+                document.getElementById("mysterybox-pulls").textContent = mysteryBox.possible_pulls;
+                document.getElementById("mysterybox-price").textContent = `$${mysteryBox.price}`;
+                document.getElementById("mysterybox-description").textContent = mysteryBox.description;
+            } else {
+                console.error("Mystery Box not found!");
+            }
+        })
+        .catch(error => console.error("Error loading mystery box details:", error));
+}
+

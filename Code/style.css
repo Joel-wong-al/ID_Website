@@ -236,6 +236,23 @@ body {
     animation: fadeIn 1s ease-in-out 1.2s forwards;
 }
 
+/* Default: Show Prestige Words */
+.brand-name-left, .brand-name-right {
+    font-size: 100px;
+    font-weight: bold;
+    opacity: 0.1; /* Lower opacity for subtle effect */
+    text-transform: uppercase;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Hide Prestige Words on Small Screens */
+@media (max-width: 1024px) {  /* Adjust the size as needed */
+    .brand-name-left, .brand-name-right {
+        display: none;
+    }
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -495,25 +512,69 @@ body {
     }
 }
 
-/* Bottom Navigation Bar */
+/* ===========================
+   🔹 BottomNavbar Styling
+=========================== */
 .bottom-nav {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #111;
+    background-color: black;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 10px 0;
-    color: #fff;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
     z-index: 1000;
 }
 
+/* Navigation Links */
 .bottom-nav a {
+    color: white;
+    font-size: 14px;
+    text-align: center;
     text-decoration: none;
-    color: #E7E1B6;
-    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;  /* Ensure equal spacing */
+}
+
+/* Icons */
+.bottom-nav a i {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+/* Fix Layout Issues on Mobile */
+@media (max-width: 768px) {
+    .bottom-nav {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px 0;
+    }
+
+    .bottom-nav a {
+        font-size: 12px; /* Adjust text size for better fit */
+    }
+
+    .bottom-nav a i {
+        font-size: 18px; /* Resize icons for mobile */
+        margin-bottom: 2px;
+    }
+}
+
+/* Highlight Active Page */
+.bottom-nav a.active {
+    color: gold;
     font-weight: bold;
+}
+
+/* Hover Effect */
+.bottom-nav a:hover {
+    color: #f5d142;
+    transform: scale(1.05);
 }
 
 /* Full-Screen Hero Carousel */
@@ -595,14 +656,17 @@ main {
 }
 
 
-/* Quick Links Section */
+/* ===========================
+   🔹 Quick Links Section
+=========================== */
 .quick-links {
-    text-align: left;
-    padding: 40px 80px;
+    text-align: center;
+    padding: 40px 5%;
     background-color: #181818;
     color: #E7E1B6;
 }
 
+/* Section Title */
 .quick-links h2 {
     font-size: 22px;
     font-weight: bold;
@@ -613,7 +677,8 @@ main {
 /* Links Container */
 .links-container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: center;
     gap: 20px;
 }
 
@@ -623,11 +688,12 @@ main {
     color: #fff;
     text-align: center;
     width: 22%;
+    min-width: 160px; /* Prevents shrinking too much */
     padding: 15px;
     border-radius: 10px;
     text-decoration: none;
     transition: 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(255, 223, 81, 0.2); /* Softer yellow glow */
+    box-shadow: 0 4px 10px rgba(255, 223, 81, 0.2);
 }
 
 .link-card img {
@@ -652,5 +718,30 @@ main {
 /* Hover Effect */
 .link-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(255, 223, 81, 0.5); /* Brighter yellow glow on hover */
+    box-shadow: 0 6px 15px rgba(255, 223, 81, 0.5);
 }
+
+/* ===========================
+   🔹 Mobile & Tablet Responsive Fixes
+=========================== */
+@media (max-width: 1024px) {
+    .links-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .link-card {
+        width: 45%; /* 2 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .quick-links {
+        padding: 30px 20px;
+    }
+
+    .link-card {
+        width: 90%; /* Single column layout */
+    }
+}
+

@@ -1,0 +1,28 @@
+{
+    "mystery_boxes": [
+        {
+            "id": 1,
+            "name": "Legendary Mystery Box",
+            "image": "images/Legendary_mystery_Box.webp",
+            "possible_pulls": "Epic (90%), Legendary (10%)",
+            "price": 50,
+            "description": "The ultimate mystery box! Contains high-tier items."
+        },
+        {
+            "id": 2,
+            "name": "Epic Mystery Box",
+            "image": "images/Epic_mystery_box.webp",
+            "possible_pulls": "Rare (70%), Epic (30%)",
+            "price": 35,
+            "description": "A step above the rest. Contains rare and epic items!"
+        },
+        {
+            "id": 3,
+            "name": "Rare Mystery Box",
+            "image": "images/Rare_mystery_box.webp",
+            "possible_pulls": "Common (50%), Rare (50%)",
+            "price": 15,
+            "description": "Great value! Contains a mix of common and rare items."
+        }
+    ]
+}
