@@ -8,67 +8,42 @@ body {
     background-image: url("https://wallpapers.com/images/featured/lo-fi-mvqzjym6ie17firw.jpg");
     background-size: cover;
     color: white;
-    margin: 0; /* Remove any default body margin */
-    overflow: hidden; /* Prevent any unwanted scrolling or overflow */
+    margin: 0;
+    overflow: hidden;
 }
 
-/* Glassmorphism Login Box */
-.container {
+/* Glassmorphism Register Box */
+.register-container {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 100%; /* Make the container responsive */
-    max-width: 360px; /* Ensure it doesn't get too wide */
-    box-sizing: border-box; /* Includes padding in the width calculation */
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
 }
 
 /* Title */
 h2 {
     margin-bottom: 20px;
     font-size: 24px;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 /* Input Fields */
-.input-box {
-    position: relative;
-    margin-bottom: 15px;
-}
-
-.input-box input {
-    width: 80%;
+form input {
+    width: 100%;
     padding: 12px;
-    padding-left: 40px;
     border: none;
     border-radius: 25px;
     outline: none;
     background: rgba(255, 255, 255, 0.2);
     color: white;
     font-size: 16px;
-}
-
-.input-box i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-}
-
-/* Remember Me & Forgot Password */
-.options {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-.options a {
-    color: white;
-    text-decoration: none;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 /* Button */
@@ -82,6 +57,7 @@ button {
     font-size: 18px;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -89,6 +65,10 @@ button:hover {
 }
 
 /* Register Link */
+p {
+    margin-top: 10px;
+}
+
 p a {
     color: white;
     text-decoration: none;
