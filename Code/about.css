@@ -6,16 +6,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* Navigation Bar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-}
-
 /* Full-screen Background with Overlay */
 .hero {
     margin-bottom: 50px;    
@@ -77,63 +67,246 @@
     transform: scale(1.1);
 }
 
-/* Menu Icon */
-.menu-icon {
-    font-size: 24px;
-    cursor: pointer;
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #111;
+    color: #fff;
 }
 
-/* Slide-out Menu */
+/* Menu Icon (Hamburger) */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Transform the hamburger into a cross */
+.menu.open .menu-icon span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.menu.open .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+.menu.open .menu-icon span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Fullscreen Slide Menu */
 .menu {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: -100%;
+    width: 100vw;
     height: 100vh;
-    background-color: #d3d3d3;
+    background-color: black;
+    color: white;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    transition: transform 0.3s ease;
+    transition: left 0.5s ease-in-out;
     z-index: 1000;
 }
 
-/* Hidden state */
-.hidden {
-    transform: translateX(-100%);
+.menu.active {
+    left: 0;
 }
 
-/* Active state */
-.active {
-    transform: translateX(0);
+/* Close Button */
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    cursor: pointer;
 }
 
-/* Menu Links */
-.menu a {
-    text-decoration: none;
-    color: black;
-    font-size: 24px;
-    margin: 15px 0;
-    transition: color 0.3s;
+/* Prestige Words Container */
+.brand-name-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between words */
+    width: 100%;
+    padding: 0 30px;
+    justify-content: space-between; /* Distributes left and right evenly */
 }
 
-.menu a:hover {
-    color: #555;
+/* Left Side Prestige */
+.brand-name-left {
+    font-size: 100px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0); /* Start fully transparent */
+    opacity: 0;
+    transform: translateX(-50px); /* Start off-screen */
+    animation: fadeInStack 1.5s ease-in-out forwards, fadeGradient 4s infinite alternate ease-in-out;
+    text-align: left;
 }
 
-/* Main Content */
-.content {
-    padding: 20px;
+/* Right Side Prestige */
+.brand-name-right {
+    font-size: 100px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0); /* Start fully transparent */
+    opacity: 0;
+    transform: translateX(50px); /* Start off-screen */
+    animation: fadeInStackRight 1.5s ease-in-out forwards, fadeGradient 4s infinite alternate ease-in-out;
+    text-align: right;
+}
+
+/* Increased Staggering Delays (0.5s apart) */
+.brand-name-left:nth-child(1), .brand-name-right:nth-child(1) { animation-delay: 0.5s, 0.5s; }
+.brand-name-left:nth-child(2), .brand-name-right:nth-child(2) { animation-delay: 1s, 1s; }
+.brand-name-left:nth-child(3), .brand-name-right:nth-child(3) { animation-delay: 1.5s, 1.5s; }
+.brand-name-left:nth-child(4), .brand-name-right:nth-child(4) { animation-delay: 2s, 2s; }
+.brand-name-left:nth-child(5), .brand-name-right:nth-child(5) { animation-delay: 2.5s, 2.5s; }
+.brand-name-left:nth-child(6), .brand-name-right:nth-child(6) { animation-delay: 3s, 3s; }
+
+/* Fade-in and Slide-in Effect for Left */
+@keyframes fadeInStack {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Fade-in and Slide-in Effect for Right */
+@keyframes fadeInStackRight {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Subtle Brightness Fading Effect */
+@keyframes fadeGradient {
+    0% { color: rgba(255, 255, 255, 0.3); }
+    50% { color: rgba(255, 255, 255, 0.7); }
+    100% { color: rgba(255, 255, 255, 1); }
+}
+
+/* Menu Items */
+.menu-content {
+    flex: 1;
     text-align: center;
-}
-/* Main Content */
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInRight 0.8s ease-in-out 0.6s forwards;
 }
 
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    font-size: 50px; /* Bigger text */
+    margin: 35px 0; /* Increase spacing */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s ease-in-out forwards;
+}
+
+.menu ul li:nth-child(1) { animation-delay: 0.5s; }
+.menu ul li:nth-child(2) { animation-delay: 0.6s; }
+.menu ul li:nth-child(3) { animation-delay: 0.7s; }
+.menu ul li:nth-child(4) { animation-delay: 0.8s; }
+.menu ul li:nth-child(5) { animation-delay: 0.9s; }
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+    display: inline-block;
+    padding: 5px 20px;
+}
+
+/* Hover Effect */
+.menu ul li a:hover {
+    color: #6b6b6b;
+    font-weight: bold;
+}
+
+.menu ul li a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: #ffffff;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    font-size: 24px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1.2s forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* Introduction Section */
 .intro {
     background-color: #fff;
