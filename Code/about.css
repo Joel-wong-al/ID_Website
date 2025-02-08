@@ -18,6 +18,7 @@
 
 /* Full-screen Background with Overlay */
 .hero {
+    margin-bottom: 50px;    
     background: url('images/Artist.png') no-repeat center center/cover;
     width: 100%;
     height: 100vh;
@@ -198,6 +199,64 @@ main {
     color: #555;
     line-height: 1.6;
 }
+/* Styling for Our Commitments Section */
+.highlights {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.highlights-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.highlights-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.highlight {
+    width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.highlight img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.highlight h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.mission img, .vision img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
 
 /* Team Section */
 .team {
@@ -244,6 +303,17 @@ main {
     color: #777;
     font-size: 1em;
 }
+/* Adjusting Images Under Mission and Vision */
+.mission img, .vision img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+
 
 /* Bottom Navigation Bar */
 .bottom-nav {
