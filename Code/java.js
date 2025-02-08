@@ -159,3 +159,98 @@ document.addEventListener("DOMContentLoaded", function () {
     showStep(0);
 });
 
+// ==============================
+// Fetch Products from JSON (Products Page)
+// ==============================
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("products.json") // Change this path if JSON is inside a folder, e.g., "data/products.json"
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("JSON Loaded Successfully:", data);
+            loadProducts(data.recently_viewed, "recently_viewed");
+            loadProducts(data.suggested, "suggested");
+            loadPopularProducts(data.popular_products); // Ensure popular products load
+        })
+        .catch(error => console.error("Error loading products:", error.message));
+});
+
+// Function to Load and Display Products on Page
+function loadProducts(products, containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) {
+        console.error(`Container with ID "${containerId}" not found.`);
+        return;
+    }
+
+    container.innerHTML = ""; // Clear existing content
+
+    products.forEach(product => {
+        const productCard = document.createElement("div");
+        productCard.classList.add("product-card");
+
+        // Wrap product in an anchor tag to link to details page
+        productCard.innerHTML = `
+            <a href="productdetails.html?id=${product.id}">
+                <img src="${product.image}" alt="${product.name}">
+                <div class="product-info">
+                    <h3>${product.name}</h3>
+                    <p>Rarity: ${product.rarity}</p>
+                    <p>Price: $${product.price}</p>
+                </div>
+            </a>
+        `;
+
+        container.appendChild(productCard);
+    });
+}
+
+// ==============================
+// Fetch Products from JSON (Home Page)
+// ==============================
+
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("products.json") // Ensure JSON file is correctly linked
+        .then(response => response.json())
+        .then(data => {
+            loadPopularProducts(data.popular_products);
+        })
+        .catch(error => console.error("Error loading popular products:", error));
+});
+
+// Function to Load Popular Products with Background Images
+function loadPopularProducts(products) {
+    const container = document.getElementById("popular-products");
+
+    if (!container) return; // Prevent errors if container is missing
+
+    container.innerHTML = ""; // Clear previous content
+
+    products.forEach(product => {
+        const productCard = document.createElement("div");
+        productCard.classList.add("product-card");
+
+        // Set background image dynamically
+        productCard.style.backgroundImage = `url('${product.image}')`;
+        productCard.style.backgroundSize = "cover"; 
+        productCard.style.backgroundPosition = "center"; 
+
+        // Wrap in an anchor tag to redirect to product details
+        productCard.innerHTML = `
+            <a href="productdetails.html?id=${product.id}" class="product-overlay">
+                <h3>${product.name}</h3>
+                <p>RARITY: ${product.rarity}</p>
+                <p>${product.magsafe ? "MAGSAFE COMPATIBLE" : ""}</p>
+                <p>${product.device}</p>
+                <span class="price">$${product.price.toFixed(2)}</span>
+            </a>
+        `;
+
+        container.appendChild(productCard);
+    });
+}
