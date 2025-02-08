@@ -2,34 +2,32 @@
 // Navigation Menu (All Pages)
 // ==============================
 
-// Function to toggle the slide-out menu
-function toggleMenu() {
-  // Select the menu element
-  const menu = document.querySelector('.menu');
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".menu-icon");
+    const menu = document.querySelector(".menu");
+    const closeIcon = document.querySelector(".close-icon");
 
-  // Toggle the hidden and active classes
-  if (menu.classList.contains('hidden')) {
-      menu.classList.remove('hidden');
-      menu.classList.add('active');
-  } else {
-      menu.classList.add('hidden');
-      menu.classList.remove('active');
-  }
-}
+    // Open Menu (Slide from Left)
+    menuIcon.addEventListener("click", function () {
+        menu.classList.add("active");
+        menuIcon.classList.add("open");
+    });
 
-// Attach the click event listener to the menu icon
-const menuIcon = document.querySelector('.menu-icon');
-menuIcon.addEventListener('click', toggleMenu);
+    // Close Menu (Slide Back)
+    closeIcon.addEventListener("click", function () {
+        menu.classList.remove("active");
+        menuIcon.classList.remove("open");
+    });
 
-// Close the menu when a menu link is clicked
-const menuLinks = document.querySelectorAll('.menu a');
-menuLinks.forEach(link => {
-  link.addEventListener('click', () => {
-      const menu = document.querySelector('.menu');
-      menu.classList.add('hidden');
-      menu.classList.remove('active');
-  });
+    // Close menu when clicking a menu link
+    document.querySelectorAll(".menu a").forEach(item => {
+        item.addEventListener("click", function () {
+            menu.classList.remove("active");
+            menuIcon.classList.remove("open");
+        });
+    });
 });
+
 
 // ==============================
 // Daily Log-in (Home Page)

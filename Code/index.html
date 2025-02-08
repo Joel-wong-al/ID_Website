@@ -14,25 +14,57 @@
         </a>
     </div>
     
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <div class="menu-icon">☰</div>
-        <div class="icons">
-            <i class="user-icon">👤</i>
-            <a href="checkout.html">
-                <div class="cart-icon">🛒</div>
-            </a>
+<!-- Navigation Bar -->
+<div class="navbar">
+    <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="icons">
+        <i class="user-icon">👤</i>
+        <a href="checkout.html">
+            <div class="cart-icon">🛒</div>
+        </a>
+    </div>
+</div>
+
+<!-- Slide-Out Fullscreen Menu -->
+<div class="menu hidden">
+    <!-- Stacked Prestige Words -->
+    <div class="brand-name-container">
+        <div class="brand-name-left">PRESTIGE</div>
+        <div class="brand-name-left">PRESTIGE</div>
+        <div class="brand-name-left">PRESTIGE</div>
+        <div class="brand-name-left">PRESTIGE</div>
+        <div class="brand-name-left">PRESTIGE</div>
+        <div class="brand-name-left">PRESTIGE</div>
+    
+        <div class="brand-name-right">PRESTIGE</div>
+        <div class="brand-name-right">PRESTIGE</div>
+        <div class="brand-name-right">PRESTIGE</div>
+        <div class="brand-name-right">PRESTIGE</div>
+        <div class="brand-name-right">PRESTIGE</div>
+        <div class="brand-name-right">PRESTIGE</div>
+    </div>
+    <div class="menu-content">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="products.html">PRODUCTS</a></li>
+            <li><a href="mysterybox.html">MYSTERY BOX</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="account.html">ACCOUNT</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
         </div>
     </div>
 
-    <!-- Slide-out Menu -->
-    <div class="menu hidden">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="mysterybox.html">Mystery Box</a>
-        <a href="about.html">About Us</a>
-        <a href="account.html">Account</a>
-    </div>
+    <div class="close-icon">✖</div>
+</div>
+
 
 <!-- 7-Day Login Reward System -->
 <section class="login-reward">
@@ -120,38 +152,71 @@
         </div>
     </section>
     
-    <!-- Popular Products Grid -->
-    <main>
-        <section class="popular-products">
-            <h2>Popular Products</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <img src="Images/Epic5.png" alt="Hogwarts Crest">
-                    <p>Hogwarts Crest</p>
-                </div>
-                <div class="product">
-                    <img src="Images/Epic1.webp" alt="Iron Man">
-                    <p>Iron Man</p>
-                </div>
-                <div class="product">
-                    <img src="product3.jpg" alt="Death Star">
-                    <p>Death Star</p>
-                </div>
-                <div class="product">
-                    <img src="product4.jpg" alt="Gundam RX-78-2">
-                    <p>Gundam RX-78-2</p>
-                </div>
-                <div class="product">
-                    <img src="product5.jpg" alt="Harry Potter">
-                    <p>Harry Potter</p>
-                </div>
-                <div class="product">
-                    <img src="product6.jpg" alt="Star Wars">
-                    <p>Star Wars</p>
-                </div>
+<!-- Popular Products Section -->
+<section class="popular-products">
+    <h2>Popular Products</h2>
+    <div class="product-grid">
+        <div class="product-card hogwarts">
+            <div class="product-overlay">
+                <h3>HOGWARTS CREST</h3>
+                <p>RARITY: EPIC</p>
+                <p>MAGSAFE COMPATIBLE</p>
+                <p>IPHONE 16 PRO MAX</p>
+                <span class="price">$100.00</span>
             </div>
-        </section>
-    </main>
+        </div>
+
+        <div class="product-card ironman">
+            <div class="product-overlay">
+                <h3>IRON MAN</h3>
+                <p>RARITY: EPIC</p>
+                <p>MAGSAFE COMPATIBLE</p>
+                <p>IPHONE 16 PRO MAX</p>
+                <span class="price">$100.00</span>
+            </div>
+        </div>
+
+        <div class="product-card deathstar">
+            <div class="product-overlay">
+                <h3>DEATH STAR</h3>
+                <p>RARITY: EPIC</p>
+                <p>MAGSAFE COMPATIBLE</p>
+                <p>IPHONE 16 PRO MAX</p>
+                <span class="price">$100.00</span>
+            </div>
+        </div>
+
+        <div class="product-card gundam">
+            <div class="product-overlay">
+                <h3>GUNDAM RX-78-2</h3>
+                <p>RARITY: EPIC</p>
+                <p>MAGSAFE COMPATIBLE</p>
+                <p>IPHONE 16 PRO MAX</p>
+                <span class="price">$100.00</span>
+            </div>
+        </div>
+
+        <div class="product-card evangelion">
+            <div class="product-overlay">
+                <h3>EVANGELION</h3>
+                <p>RARITY: EPIC</p>
+                <p>MAGSAFE COMPATIBLE</p>
+                <p>IPHONE 16 PRO MAX</p>
+                <span class="price">$100.00</span>
+            </div>
+        </div>
+
+        <div class="product-card starwars">
+            <div class="product-overlay">
+                <h3>STAR WARS</h3>
+                <p>RARITY: EPIC</p>
+                <p>MAGSAFE COMPATIBLE</p>
+                <p>IPHONE 16 PRO MAX</p>
+                <span class="price">$100.00</span>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Bottom Navigation -->
     <nav class="bottom-nav">
