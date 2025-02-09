@@ -446,6 +446,7 @@ Front-End Development: Took the lead in implementing the user interface (UI), en
 Styling & Aesthetics: Applied CSS, animations, and design principles to enhance the look and feel of the app.
 Collaboration: Worked closely with Joel to integrate APIs into the front-end, ensuring smooth data communication.
 User Experience Testing: Conducted testing and refinements to optimize the interface for user engagement.
+
 Joel Wong:
 API Development: Focused on the backend logic and API implementation, ensuring seamless data retrieval and processing.
 API Integration: Worked on connecting the front-end with APIs, enabling real-time data updates and smooth interactions.
