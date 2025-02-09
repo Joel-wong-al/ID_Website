@@ -205,6 +205,9 @@ JSON – Stores product data separately for easy updates and maintenance.
 Assistive AI
 
 This section documents how AI tools were used to assist in the development of Prestige, ensuring transparency in AI-driven contributions to the project.
+ChatGPT:
+
+🔹 Debugging & Coding Assistance - You've asked for help debugging and fixing issues in your code, especially in front-end development.
 
 🔹 EmailJS Integration – Helped in troubleshooting API connections to ensure smooth email messaging.
 
@@ -415,7 +418,7 @@ Issue: Some navigation links were not working because they were pointing to inco
 
 Fix: Verified and corrected all page links in the HTML files to ensure they directed users to the correct pages.
 
-Credits
+Credits:
 
 Content Sources
 
@@ -436,4 +439,16 @@ Allbirds - [Inspiration for About Me Page](https://www.allbirds.com/pages/our-st
 YouTube - Login & Contact Us Page Reference - https://youtu.be/hlwlM4a5rxg?si=g218NL5nAdTOdt2X 
 
 Casetify - https://www.casetify.com/iphone-cases/iphone-16-pro-max-cases?nbt=nb%3Aadwords%3Ag%3A20750867163%3A161105742368%3A714276348185&nb_adtype=&nb_kwd=casetify&nb_ti=kwd-299194893737&nb_mi=&nb_pc=&nb_pi=&nb_ppi=&nb_placement=&nb_si={sourceid}&nb_li_ms=&nb_lp_ms=&nb_fii=&nb_ap=&nb_mt=e&utm_source=google&utm_campaign=202311_MOFU_SN_Evergreen_SG_Brand_ENG_SEA&utm_medium=cpc&utm_content=&utm_term=casetify&gad_source=1&gclid=CjwKCAiAnpy9BhAkEiwA-P8N4j_sfraNkOoNNMruywR4A4KC4QZRPpc1v9xIGdZf3TCjg7dMkF_BPhoC68UQAvD_BwE
+
+Roles:
+Javier Leo:
+Front-End Development: Took the lead in implementing the user interface (UI), ensuring responsiveness and usability across different devices.
+Styling & Aesthetics: Applied CSS, animations, and design principles to enhance the look and feel of the app.
+Collaboration: Worked closely with Joel to integrate APIs into the front-end, ensuring smooth data communication.
+User Experience Testing: Conducted testing and refinements to optimize the interface for user engagement.
+Joel Wong:
+API Development: Focused on the backend logic and API implementation, ensuring seamless data retrieval and processing.
+API Integration: Worked on connecting the front-end with APIs, enabling real-time data updates and smooth interactions.
+Front-End Contribution: Assisted in developing functional components and troubleshooting UI-related bugs.
+
 
