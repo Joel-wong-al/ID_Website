@@ -1,4 +1,6 @@
 ##Prestige##
+Extra note:
+Start at login page and need go live to be able to see the products in the website.
 
 ##Design Process##
 
@@ -487,4 +489,3 @@ Front-End Contribution: Assisted in developing functional components and trouble
 
 ##GitHub Link##
 [https://github.com/Joel-wong-al/ID_Website/blob/main/README.md](https://github.com/Joel-wong-al/ID_Website)
-
