@@ -1,4 +1,6 @@
 ##Prestige##
+Extra note:
+Start at login page and need go live to be able to see the products in the website.
 
 ##Design Process##
 
