@@ -233,7 +233,7 @@ JSON – Stores product data separately for easy updates and maintenance.
 This section documents how AI tools were used to assist in the development of Prestige, ensuring transparency in AI-driven contributions to the project.
 ChatGPT:
 
-🔹 Debugging & Coding Assistance - You've asked for help debugging and fixing issues in your code, especially in front-end development.
+🔹 Debugging & Coding Assistance - We have asked for help debugging and fixing issues in our code. Also refinement of our website pages. 
 
 🔹 EmailJS Integration – Helped in troubleshooting API connections to ensure smooth email messaging.
 
