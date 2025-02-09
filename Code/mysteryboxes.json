@@ -1,28 +1,38 @@
 {
     "mystery_boxes": [
         {
-            "id": 1,
+            "id": "3",
             "name": "Legendary Mystery Box",
+            "price": 75,
+            "description": "The Prestige.",
             "image": "images/Legendary_mystery_Box.webp",
-            "possible_pulls": "Epic (90%), Legendary (10%)",
-            "price": 50,
-            "description": "The ultimate mystery box! Contains high-tier items."
-        },
+            "preview_case_1": "https://sketchfab.com/3d-models/evangelion-airpods-case-70fdd2ca11ce472a974acf25bb3f8c6b",
+            "preview_case_2": "https://sketchfab.com/3d-models/gundam-earbuds-grey-f2c3bca409874cd0a7b1bd3255a8629a",
+            "possible_pulls": {
+              "Epic": 90,
+              "Legendary": 10
+            }
+          },
         {
-            "id": 2,
+            "id": "2",
             "name": "Epic Mystery Box",
+            "price": 40,
+            "description": "Are you ready for some Epic adventures?",
             "image": "images/Epic_mystery_box.webp",
-            "possible_pulls": "Rare (70%), Epic (30%)",
-            "price": 35,
-            "description": "A step above the rest. Contains rare and epic items!"
-        },
+            "possible_pulls": {
+              "Rare": 70,
+              "Epic": 30
+            }
+          },
         {
-            "id": 3,
+            "id": "1",
             "name": "Rare Mystery Box",
+            "price": 20,
+            "description": "Don't miss out on this rare opportunity!",
             "image": "images/Rare_mystery_box.webp",
-            "possible_pulls": "Common (50%), Rare (50%)",
-            "price": 15,
-            "description": "Great value! Contains a mix of common and rare items."
-        }
-    ]
+            "possible_pulls": {
+              "Rare": 100
+            }
+          }
+        ]
 }

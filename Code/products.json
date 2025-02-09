@@ -2,43 +2,43 @@
     "recently_viewed": [
         {
             "id": 1,
-            "name": "Neon iPhone Case",
+            "name": "Blue iPhone Case",
             "image": "Products Images/Rare1.jpg",
-            "price": 25,
+            "price": 35,
             "rarity": "Rare",
-            "description": "A sleek neon iPhone case for a stylish look."
+            "description": "A sleek iPhone case for a stylish look."
         },
         {
             "id": 2,
             "name": "Neon AirPods Case",
             "image": "Products Images/Rare2.webp",
-            "price": 25,
+            "price": 35,
             "rarity": "Rare",
-            "description": "A stylish neon AirPods case."
+            "description": "A sleek iPhone case for a stylish look"
         },
         {
             "id": 3,
             "name": "Purple iPhone Case",
             "image": "Products Images/Rare26.jpg",
-            "price": 25,
+            "price": 35,
             "rarity": "Rare",
-            "description": "Elegant purple iPhone case with sleek design."
+            "description": "A sleek iPhone case for a stylish look"
         },
         {
             "id": 4,
             "name": "Gold iPhone Case",
             "image": "Products Images/Rare27.jpg",
-            "price": 70,
+            "price": 35,
             "rarity": "Legendary",
-            "description": "Luxury gold iPhone case for premium users."
+            "description": "A sleek iPhone case for a stylish look"
         },
         {
             "id": 5,
             "name": "One Piece iPhone Case",
             "image": "Products Images/Rare5.jpg",
-            "price": 50,
+            "price": 35,
             "rarity": "Epic",
-            "description": "A high-quality One Piece themed iPhone case."
+            "description": "A sleek iPhone case for a stylish look"
         }
     ],
     "suggested": [
@@ -46,39 +46,39 @@
             "id": 6,
             "name": "Neon iPhone Case",
             "image": "Products Images/Rare6.jpg",
-            "price": 10,
+            "price": 35,
             "rarity": "Rare",
-            "description": "Vibrant neon-colored iPhone case."
+            "description": "A sleek iPhone case for a stylish look"
         },
         {
             "id": 7,
             "name": "Rare Mystery Case",
             "image": "Products Images/Rare7.webp",
-            "price": 8,
+            "price": 35,
             "rarity": "Rare",
-            "description": "A surprise mystery iPhone case."
+            "description": "A sleek iPhone case for a stylish look"
         },
         {
             "id": 8,
             "name": "One Piece iPhone Case",
             "image": "Products Images/Rare8.jpg",
-            "price": 50,
+            "price": 35,
             "rarity": "Epic",
-            "description": "Stylish One Piece themed case."
+            "description": "A sleek iPhone case for a stylish look"
         },
         {
             "id": 9,
             "name": "Blue iPhone Case",
             "image": "Products Images/Rare9.jpg",
-            "price": 15,
+            "price": 35,
             "rarity": "Common",
-            "description": "Minimalist blue iPhone case."
+            "description": "A sleek iPhone case for a stylish look"
         },
         {
             "id": 10,
             "name": "Red iPhone Case",
             "image": "Products Images/Rare10.jpg",
-            "price": 20,
+            "price": 35,
             "rarity": "Common",
             "description": "Bold red iPhone case for a striking look."
         },
@@ -86,7 +86,7 @@
             "id": 11,
             "name": "Silver iPhone Case",
             "image": "Products Images/Rare11.jpg",
-            "price": 30,
+            "price": 35,
             "rarity": "Rare",
             "description": "Sleek silver iPhone case with a smooth finish."
         },
@@ -94,7 +94,7 @@
             "id": 12,
             "name": "Green iPhone Case",
             "image": "Products Images/Rare12.jpg",
-            "price": 18,
+            "price": 35,
             "rarity": "Common",
             "description": "Earthy green iPhone case with nature inspiration."
         },
@@ -102,7 +102,7 @@
             "id": 13,
             "name": "Orange iPhone Case",
             "image": "Products Images/Rare13.jpg",
-            "price": 40,
+            "price": 35,
             "rarity": "Epic",
             "description": "Bright orange iPhone case for a fun vibe."
         },
@@ -110,7 +110,7 @@
             "id": 14,
             "name": "Purple AirPods Case",
             "image": "Products Images/Rare14.jpg",
-            "price": 22,
+            "price": 35,
             "rarity": "Rare",
             "description": "Premium purple AirPods case."
         },
@@ -118,7 +118,7 @@
             "id": 15,
             "name": "Galaxy iPhone Case",
             "image": "Products Images/Rare15.jpg",
-            "price": 80,
+            "price": 35,
             "rarity": "Legendary",
             "description": "Galaxy-inspired iPhone case with stellar design."
         },
@@ -134,7 +134,7 @@
             "id": 17,
             "name": "Floral iPhone Case",
             "image": "Products Images/Rare17.jpg",
-            "price": 12,
+            "price": 35,
             "rarity": "Common",
             "description": "Beautiful floral-designed iPhone case."
         },
@@ -142,7 +142,7 @@
             "id": 18,
             "name": "Black Leather iPhone Case",
             "image": "Products Images/Rare18.jpg",
-            "price": 55,
+            "price": 35,
             "rarity": "Epic",
             "description": "Premium black leather iPhone case."
         },
@@ -150,7 +150,7 @@
             "id": 19,
             "name": "Pink iPhone Case",
             "image": "Products Images/Rare19.jpg",
-            "price": 28,
+            "price": 35,
             "rarity": "Rare",
             "description": "Cute pink iPhone case for a stylish look."
         },
@@ -158,7 +158,7 @@
             "id": 20,
             "name": "Vintage iPhone Case",
             "image": "Products Images/Rare20.jpg",
-            "price": 90,
+            "price": 35,
             "rarity": "Legendary",
             "description": "Vintage aesthetic iPhone case."
         }

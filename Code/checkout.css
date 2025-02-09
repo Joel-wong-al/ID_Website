@@ -11,31 +11,33 @@ body {
     color: #fff;
 }
 
-/* Centered Home Logo */
 .home-logo-container {
     position: absolute;
-    top: -50px;  
+    top: -100px;  /* Moved higher to avoid blocking elements */
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1000;
+    z-index: 5; /* Lower priority to ensure clicks go through */
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: none; /* Allows clicks to pass through */
 }
 
-/* Bigger Logo */
+/* Home Logo Styling */
 .home-logo {
-    height: 160px;  /* Increased size */
+    height: 140px;  /* Adjusted size for better spacing */
     width: auto;
-    max-width: 350px; /* Allows for responsiveness */
+    max-width: 300px; /* Keeps it responsive */
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    pointer-events: auto; /* Ensures the logo itself is still clickable */
 }
 
 /* Hover Effect */
 .home-logo:hover {
     transform: scale(1.1);
 }
+
 
 /* Navbar */
 .navbar {
@@ -492,23 +494,6 @@ input::placeholder {
 .summary-totals .total {
     font-size: 18px;
     font-weight: bold;
-}
-
-/* Voucher Button */
-.apply-voucher {
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
-    color: #E7E1B6;
-    font-size: 14px;
-    border: none;
-    border-radius: 4px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.apply-voucher:hover {
-    background-color: #444;
 }
 
 /* ===========================
