@@ -452,4 +452,6 @@ API Development: Focused on the backend logic and API implementation, ensuring s
 API Integration: Worked on connecting the front-end with APIs, enabling real-time data updates and smooth interactions.
 Front-End Contribution: Assisted in developing functional components and troubleshooting UI-related bugs.
 
+GitHub Link:
+https://github.com/Joel-wong-al/ID_Website/blob/main/README.md
 
