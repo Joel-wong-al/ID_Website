@@ -1,4 +1,6 @@
-/* General Styles */
+/* ============================= */
+/* 🔹 General Styles */
+/* ============================= */
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -8,7 +10,9 @@ body {
     padding: 0;
 }
 
-/* Back to Home Button */
+/* ============================= */
+/* 🔹 Back to Home Button with Font Awesome */
+/* ============================= */
 .back-to-home {
     display: flex;
     align-items: center;
@@ -19,21 +23,25 @@ body {
     font-size: 18px;
     color: #fff;
     font-weight: bold;
-    transition: transform 0.2s ease-in-out;
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.back-to-home img {
-    width: 40px;
-    height: 40px;
+.back-to-home i {
     margin-right: 8px;
-    filter: brightness(0) invert(1); /* Ensures white visibility */
+    font-size: 22px; 
 }
 
 .back-to-home:hover {
+    background: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
 }
 
-/* Product Container */
+/* ============================= */
+/* 🔹 Product Container */
+/* ============================= */
 .product-container {
     display: flex;
     flex-direction: column;
@@ -41,9 +49,11 @@ body {
     padding: 50px 20px;
 }
 
-/* Product Image */
+/* ============================= */
+/* 🔹 Product Image Styling */
+/* ============================= */
 .product-image img {
-    width: 300px;
+    width: 320px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
@@ -55,7 +65,9 @@ body {
     transform: scale(1.05);
 }
 
-/* Product Info */
+/* ============================= */
+/* 🔹 Product Info Styling */
+/* ============================= */
 .product-info {
     max-width: 500px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -69,6 +81,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .product-info p {
@@ -78,10 +91,12 @@ body {
 
 .product-info span {
     font-weight: bold;
-    color: #f5d142;
+    color: #f5d142; /* Gold color for emphasis */
 }
 
-/* Add to Cart Button */
+/* ============================= */
+/* 🔹 Add to Cart Button */
+/* ============================= */
 .add-to-cart {
     background-color: yellow;
     color: black;
@@ -100,7 +115,9 @@ body {
     transform: scale(1.05);
 }
 
-/* Responsive */
+/* ============================= */
+/* 🔹 Responsive Design */
+/* ============================= */
 @media (max-width: 768px) {
     .product-info {
         max-width: 90%;
@@ -109,20 +126,30 @@ body {
     .product-image img {
         width: 250px;
     }
+
+    .back-to-home {
+        top: 10px;
+        left: 10px;
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .back-to-home i {
+        font-size: 18px;
+    }
 }
 
 /* ============================== */
-/* Popup Modal Styling */
+/* 🔹 Popup Modal Styling */
 /* ============================== */
-
 .popup {
-    display: none; /* Initially hidden */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
     z-index: 999;
@@ -205,7 +232,9 @@ body {
     transform: scale(1.05);
 }
 
-/* Fade-in Animation */
+/* ============================== */
+/* 🔹 Animations */
+/* ============================== */
 @keyframes fadeIn {
     from {
         opacity: 0;

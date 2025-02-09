@@ -9,15 +9,20 @@
 <body>
     <div class="register-container">
         <h2>Sign Up</h2>
-        <form>
+        <form id="register-form">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email" required>
             <input type="password" placeholder="Password" required>
-            <a href="index.html">
-                <button type="button">Register</button>
-            </a>
+            <button type="submit">Register</button> <!-- Fixed: No <a> tag -->
         </form>
         <p>Already have an account? <a href="log-in.html">Login</a></p>
     </div>
+
+    <script>
+        document.getElementById("register-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents default form submission
+            window.location.href = "index.html"; // Redirect after clicking register
+        });
+    </script>
 </body>
 </html>

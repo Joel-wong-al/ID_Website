@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Menu</title>
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <!-- Clickable Logo for Returning Home (Centered) -->
     <div class="home-logo-container">
         <a href="index.html">
-            <img src="images/restige (3).png" class="home-logo" alt="JR Logo">
+            <img src="images/restige(3).png" class="home-logo" alt="JR Logo">
         </a>
     </div>
     
     <!-- Navigation Bar -->
     <div class="navbar">
-        <div class="menu-icon">☰</div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i> <!-- Font Awesome Menu Icon -->
+        </div>
         <div class="icons">
-            <i class="user-icon">👤</i>
-            <a href="checkout.html">
-                <div class="cart-icon">🛒</div>
-            </a>
+            <a href="account.html" class="nav-icon"><i class="fa-solid fa-user"></i></a>
+            <a href="checkout.html" class="nav-icon"><i class="fa-solid fa-shopping-cart"></i></a>
         </div>
     </div>
 
@@ -127,7 +128,7 @@
                 
                 <!-- Supporting Eco-Conscious Artists -->
                 <div class="highlight">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0d_lzYM-88wZeZdgmI16n6qfo1C1pD9r7Ug&s" alt="Artists">
+                    <img src="Images/Artists.png" alt="Artists">
                     <h3>Supporting Artists</h3>
                     <p>We collaborate with talented artists who create unique, high-quality designs for our products. By supporting these creators, we help promote their work while delivering one-of-a-kind, artist-made accessories that reflect individuality and environmental responsibility.</p>
                 </div>
@@ -153,18 +154,15 @@
                 </div>
             </div>
         </section>
-
-
-
     </div>
     
     <!-- Bottom Navigation -->
     <nav class="bottom-nav">
-        <a href="index.html">🏠 Home</a>
-        <a href="products.html">🔍 Search</a>
-        <a href="mysterybox.html">🎁 Mystery Box</a>
-        <a href="checkout.html">🛒 Cart</a>
-        <a href="account.html">👤 Profile</a>
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="products.html"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+        <a href="mysterybox.html"><i class="fa-solid fa-gift"></i> Mystery Box</a>
+        <a href="checkout.html"><i class="fa-solid fa-shopping-cart"></i> Cart</a>
+        <a href="account.html"><i class="fa-solid fa-user"></i> Profile</a>
     </nav>
 
     <script src="java.js"></script>

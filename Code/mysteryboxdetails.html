@@ -13,11 +13,11 @@
 
     <!-- Mystery Box Details Container -->
     <div class="mysterybox-container">
-        <img id="mysterybox-image" src="" alt="Mystery Box">
-        <h2 id="mysterybox-name"></h2>
-        <p><strong>Possible Pulls:</strong> <span id="mysterybox-pulls"></span></p>
-        <p><strong>Price:</strong> <span id="mysterybox-price"></span></p>
-        <p id="mysterybox-description"></p>
+        <img id="mysterybox-image" src="images/default-box.png" alt="Mystery Box"> <!-- Set a default image -->
+        <h2 id="mysterybox-name">Mystery Box</h2> <!-- Set a default name -->
+        <p><strong>Possible Pulls:</strong> <span id="mysterybox-pulls">Loading...</span></p>
+        <p><strong>Price:</strong> <span id="mysterybox-price">Loading...</span></p>
+        <p id="mysterybox-description">Loading description...</p>
         
         <!-- Buttons for Purchasing and Previewing -->
         <div class="buttons">
@@ -25,8 +25,8 @@
             
             <!-- Two preview buttons (only for Legendary case) -->
             <div id="preview-buttons" class="hidden">
-                <button onclick="window.location.href='preview.html?case=1'">Preview Case 1</button>
-                <button onclick="window.location.href='preview.html?case=2'">Preview Case 2</button>
+                <button id="preview-case-1">Preview Case 1</button>
+                <button id="preview-case-2">Preview Case 2</button>
             </div>
         </div>
     </div>
@@ -34,5 +34,3 @@
     <script src="mysteryboxdetails.js"></script>
 </body>
 </html>
-
-

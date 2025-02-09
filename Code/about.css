@@ -67,7 +67,7 @@
     transform: scale(1.1);
 }
 
-/* Navbar */
+/* Navigation Bar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -78,13 +78,51 @@
 }
 
 /* Menu Icon (Hamburger) */
-.menu-icon {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.menu-icon i {
+    font-size: 24px; /* Bigger size */
+    color: white;
     cursor: pointer;
-    z-index: 1100;
+    transition: transform 0.3s ease-in-out;
 }
+
+/* Hover Effect */
+.menu-icon i:hover {
+    transform: scale(1.2);
+}
+
+/* Logo */
+.logo-container {
+    font-size: 22px; /* Larger font for visibility */
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Bold styling for "TIGE" */
+.bold-text {
+    color: white;
+    font-weight: 900;
+}
+
+/* Navbar Icons */
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Individual Icons */
+.nav-icon i {
+    font-size: 22px; /* Bigger size */
+    color: white;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.nav-icon i:hover {
+    color: #FFD700; /* Gold on hover */
+    transform: scale(1.2);
+}
+
 
 .menu-icon span {
     display: block;
@@ -536,22 +574,67 @@ body {
     }
 }
 
-/* Bottom Navigation Bar */
+/* ===========================
+   🔹 BottomNavbar Styling
+=========================== */
 .bottom-nav {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #E7E1B6;
+    background-color: black;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 10px 0;
-    color: #222;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
 }
 
+/* Navigation Links */
 .bottom-nav a {
+    color: white;
+    font-size: 14px;
+    text-align: center;
     text-decoration: none;
-    color: #222;
-    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;  /* Ensure equal spacing */
+}
+
+/* Icons */
+.bottom-nav a i {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+/* Fix Layout Issues on Mobile */
+@media (max-width: 768px) {
+    .bottom-nav {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px 0;
+    }
+
+    .bottom-nav a {
+        font-size: 12px; /* Adjust text size for better fit */
+    }
+
+    .bottom-nav a i {
+        font-size: 18px; /* Resize icons for mobile */
+        margin-bottom: 2px;
+    }
+}
+
+/* Highlight Active Page */
+.bottom-nav a.active {
+    color: gold;
     font-weight: bold;
+}
+
+/* Hover Effect */
+.bottom-nav a:hover {
+    color: #f5d142;
+    transform: scale(1.05);
 }

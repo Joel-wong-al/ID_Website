@@ -5,35 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
     <link rel="stylesheet" href="productdetails.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
-    <!-- Back to Home Button -->
+    <!-- Back to Home Button with Font Awesome -->
     <a href="index.html" class="back-to-home">
-        <img src="images/home-icon.jpg" alt="Home"> Back to Home
+        <i class="fa-solid fa-house"></i> Home
     </a>
 
     <!-- Product Details Container -->
     <div class="product-container">
         <div class="product-image">
-            <img id="product-image" src="" alt="Product Image">
+            <img id="product-image" src="images/default-product.png" alt="Product Image"> <!-- Set a default image -->
         </div>
         <div class="product-info">
-            <h2 id="product-name"></h2>
-            <p><span>Rarity:</span> <span id="product-rarity"></span></p>
-            <p><span>Price:</span> <span id="product-price"></span></p>
-            <p><span>Device:</span> <span id="product-device"></span></p>
-            <p><span>MagSafe:</span> <span id="product-magsafe"></span></p>
+            <h2 id="product-name">Loading Product...</h2> <!-- Default name -->
+            <p><span>Rarity:</span> <span id="product-rarity">N/A</span></p>
+            <p><span>Price:</span> <span id="product-price">$0.00</span></p>
+            <p><span>Device:</span> <span id="product-device">Unknown</span></p>
+            <p><span>MagSafe:</span> <span id="product-magsafe">Unknown</span></p>
             <button class="add-to-cart" id="add-to-cart-btn">Add to Cart</button>
         </div>
     </div>
 
-
-
     <!-- Popup Modal for Add to Cart -->
     <div id="cart-popup" class="popup" style="display: none;"> 
         <div class="popup-content">
-            <img id="popup-product-image" src="" alt="Product Image">
+            <img id="popup-product-image" src="images/default-product.png" alt="Product Image">
             <h3 id="popup-product-name">Product Name</h3>
             <p id="popup-product-price">Price: $0.00</p>
             <button id="continue-shopping">Continue Shopping</button>
