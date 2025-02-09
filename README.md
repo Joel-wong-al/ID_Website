@@ -124,7 +124,8 @@ Features
 
 1. Navigation System
 
-The website includes a hamburger menu that expands into a fullscreen slide-out navigation menu, allowing users to access different sections easily.
+The website includes a hamburger menu that expands into a fullscreen slide-out navigation menu, allowing users to access different sections easily. Used for menu (fa-bars), profile (fa-user), and cart (fa-shopping-cart) icons.
+
 
 2. Homepage
 
@@ -139,6 +140,8 @@ Quick access shortcut links to popular sections (Products, Mystery Box, Account,
 Login Page – Users can sign in by entering their email and password.
 
 Sign-Up Page – Allows new users to register with their name, email, and password.
+
+Account Button - The button at the top of the screen with the humaniod, when press will lead you to the account page
 
 Account Page – Users can edit their personal details, change passwords, and manage preferences.
 
@@ -170,6 +173,8 @@ A popup confirmation window when a product is added to the cart, allowing users 
 
 6. Shopping Cart & Checkout
 
+When cart button is pressed at the top of the page, it will lead you to the cart page
+
 A multi-step checkout process, including delivery, payment, and order review.
 
 Order summary section for users to review selected products before completing the transaction.
@@ -189,6 +194,27 @@ Confirmation messages for successful or failed submissions.
 All pages are optimized for mobile and tablet screens, with elements adjusting dynamically for smaller displays.
 
 Dark theme aesthetic with glassmorphism-inspired UI components.
+
+10. Font Awesome Integration in Prestige
+
+Font Awesome icons are used throughout the Prestige website to enhance visual clarity, accessibility, and user experience. By integrating Font Awesome 6, we replaced generic text and emojis with clean, scalable icons that improve navigation and usability.
+
+11.Bottom Navigation
+
+Home (fa-house), search (fa-magnifying-glass), mystery box (fa-gift), cart (fa-shopping-cart), and profile (fa-user) icons provide quick access to key pages.
+
+12.Search Bar & Buttons
+
+The search feature now includes a search icon (fa-magnifying-glass), ensuring clarity.
+
+13. Back to Home & UI Enhancements
+
+Features a home icon (fa-house) for better user guidance.
+
+Using Font Awesome ensures consistency, responsiveness, and improved aesthetics while maintaining a lightweight and efficient design.
+
+
+
 
 Technologies Used
 
