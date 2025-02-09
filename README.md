@@ -478,5 +478,5 @@ API Integration: Worked on connecting the front-end with APIs, enabling real-tim
 Front-End Contribution: Assisted in developing functional components and troubleshooting UI-related bugs.
 
 ##GitHub Link##
-https://github.com/Joel-wong-al/ID_Website/blob/main/README.md
+[https://github.com/Joel-wong-al/ID_Website/blob/main/README.md](https://github.com/Joel-wong-al/ID_Website)
 
