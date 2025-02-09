@@ -1,8 +1,8 @@
-Prestige
+##Prestige##
 
-Design Process
+##Design Process##
 
-Target Audience
+#Target Audience#
 
 Our target users are individuals who are looking to buy well-designed earbuds and phone cases. Specifically, our audience includes:
 
@@ -12,7 +12,7 @@ Our target users are individuals who are looking to buy well-designed earbuds an
 
 - Supporters of artists, particularly singers, who want to purchase exclusive merchandise
 
-User Goals
+#User Goals#
 
 Users visiting Prestige want to:
 
@@ -32,7 +32,7 @@ Users visiting Prestige want to:
 
 8. Use the website seamlessly on different devices (desktop, tablet, mobile) with a fully responsive design that adapts to different screen sizes
 
-User Stories
+#User Stories#
 
 1. As a customer, I want to press the menu button to easily navigate to other pages.
 
@@ -54,17 +54,17 @@ User Stories
 
 10. As a customer on mobile, I want the website to be fully responsive so that I can smoothly navigate around the app.
 
-Figma Wireframe
+#Figma Wireframe#
 
 Our Figma wireframes serve as the blueprint for the Prestige website, ensuring a well-structured and user-friendly interface. The wireframes help visualize the layout, navigation, and overall user experience before full implementation.
 
 🔗 Figma Wireframe Link: Prestige Wireframe on Figma
 
-Design Rationale
+#Design Rationale#
 
 This section explains the design choices made for Prestige, focusing on how they enhance usability, aesthetics, and user engagement.
 
-Target Audience
+#Target Audience#
 
 Eco-Friendly Consumers – Users who prioritize sustainability and seek environmentally friendly phone accessories.
 
@@ -72,7 +72,7 @@ Music & Artist Supporters – Fans who want to support their favorite artists (s
 
 Tech & Fashion Enthusiasts – Individuals looking for stylish and high-quality phone cases and earbuds that blend functionality with aesthetics.
 
-Objectives:
+#Objectives:
 
 Seamless Shopping Experience – The website presents products in an intuitive layout, making it easy for users to browse and purchase items.
 
@@ -80,9 +80,9 @@ Brand Identity & Visual Appeal – A modern and sleek design with engaging anima
 
 User Interaction & Engagement – Interactive features like hover effects, transitions, and smooth animations make the shopping experience enjoyable and immersive.
 
-Visual Choices:
+#Visual Choices:
 
-Color Scheme
+#Color Scheme#
 
 A combination of sleek dark tones with accent colors creates a modern, premium, and futuristic aesthetic.
 
@@ -90,7 +90,7 @@ Subtle gradients and glowing effects emphasize the luxurious and tech-forward fe
 
 The colors contrast well, ensuring easy readability and visual appeal while maintaining a sense of elegance.
 
-Typography:
+#Typography:
 
 Modern and sleek fonts are used to reflect Prestige’s high-end and stylish branding.
 
@@ -98,7 +98,7 @@ Bold headings ensure clear navigation, while clean and minimal body text enhance
 
 Font pairings help balance aesthetics and professionalism, ensuring an engaging yet easy-to-read interface.
 
-Imagery:
+#Imagery:
 
 High-resolution product images showcase the intricate designs and features of the earbuds and phone cases.
 
@@ -106,7 +106,7 @@ Subtle motion effects on product images enhance interactivity without overwhelmi
 
 Lifestyle images of users wearing the earbuds or using the phone cases help customers visualize the products in real-world settings.
 
-Interactive Design:
+#Interactive Design:
 
 Hover Effects & Animations – Buttons, images, and links have smooth hover effects that make interactions more engaging.
 
@@ -120,7 +120,7 @@ Quick Navigation – A fixed navigation bar ensures users can switch between pag
 
 🔗 Figma Wireframe Link: Prestige Wireframe on Figma
 
-Features
+##Features##
 
 1. Navigation System
 
@@ -216,7 +216,7 @@ Using Font Awesome ensures consistency, responsiveness, and improved aesthetics 
 
 
 
-Technologies Used
+##Technologies Used##
 
 HTML – Structures and organizes content across web pages.
 
@@ -228,7 +228,7 @@ EmailJS – Manages email-based user feedback without requiring a backend server
 
 JSON – Stores product data separately for easy updates and maintenance.
 
-Assistive AI
+##Assistive AI##
 
 This section documents how AI tools were used to assist in the development of Prestige, ensuring transparency in AI-driven contributions to the project.
 ChatGPT:
@@ -250,9 +250,8 @@ ChatGPT:
 
 (More updates can be added as the project progresses.)
 
-Testing
 
-Testing
+##Testing##
 
 1. Manual Testing Scenarios
 
@@ -444,13 +443,13 @@ Issue: Some navigation links were not working because they were pointing to inco
 
 Fix: Verified and corrected all page links in the HTML files to ensure they directed users to the correct pages.
 
-Credits:
+##Credits##
 
-Content Sources
+#Content Sources#
 
 ChatGPT - https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwibpcrEwLSLAxUMS2cHHTyHHG4QFnoECB0QAQ&url=https%3A%2F%2Fchatgpt.com%2F&usg=AOvVaw29vbCnS_7PDD4xupasoOfg&opi=89978449
 
-Media Attribution
+#Media Attribution#
 
 Casetify - [Phone casing and earbuds casing](https://www.casetify.com/iphone-cases/iphone-16-pro-max-cases?nbt=nb%3Aadwords%3Ag%3A20750867163%3A161105742368%3A714276348185&nb_adtype=&nb_kwd=casetify&nb_ti=kwd-299194893737&nb_mi=&nb_pc=&nb_pi=&nb_ppi=&nb_placement=&nb_si={sourceid}&nb_li_ms=&nb_lp_ms=&nb_fii=&nb_ap=&nb_mt=e&utm_source=google&utm_campaign=202311_MOFU_SN_Evergreen_SG_Brand_ENG_SEA&utm_medium=cpc&utm_content=&utm_term=casetify&gad_source=1&gclid=CjwKCAiAnpy9BhAkEiwA-P8N4j_sfraNkOoNNMruywR4A4KC4QZRPpc1v9xIGdZf3TCjg7dMkF_BPhoC68UQAvD_BwE)
 
@@ -458,7 +457,7 @@ Lofi Background - [Freepik](https://www.freepik.com/photos/lofi-wallpaper )
 
 Carousel & 7-Day Login Images - [Wallpaper Flare](https://www.wallpaperflare.com/search?wallpaper=evangelion )
 
-Acknowledgements
+#Acknowledgements#
 
 Allbirds - [Inspiration for About Me Page](https://www.allbirds.com/pages/our-story?srsltid=AfmBOoqAdhQtbh_KmpmXx1VkmIin7Yp2ZJcTAgjtGd70FYYwYtPa5vYl)
 
@@ -466,7 +465,7 @@ YouTube - Login & Contact Us Page Reference - https://youtu.be/hlwlM4a5rxg?si=g2
 
 Casetify - https://www.casetify.com/iphone-cases/iphone-16-pro-max-cases?nbt=nb%3Aadwords%3Ag%3A20750867163%3A161105742368%3A714276348185&nb_adtype=&nb_kwd=casetify&nb_ti=kwd-299194893737&nb_mi=&nb_pc=&nb_pi=&nb_ppi=&nb_placement=&nb_si={sourceid}&nb_li_ms=&nb_lp_ms=&nb_fii=&nb_ap=&nb_mt=e&utm_source=google&utm_campaign=202311_MOFU_SN_Evergreen_SG_Brand_ENG_SEA&utm_medium=cpc&utm_content=&utm_term=casetify&gad_source=1&gclid=CjwKCAiAnpy9BhAkEiwA-P8N4j_sfraNkOoNNMruywR4A4KC4QZRPpc1v9xIGdZf3TCjg7dMkF_BPhoC68UQAvD_BwE
 
-Roles:
+##Roles##
 Javier Leo:
 Front-End Development: Took the lead in implementing the user interface (UI), ensuring responsiveness and usability across different devices.
 Styling & Aesthetics: Applied CSS, animations, and design principles to enhance the look and feel of the app.
@@ -478,6 +477,6 @@ API Development: Focused on the backend logic and API implementation, ensuring s
 API Integration: Worked on connecting the front-end with APIs, enabling real-time data updates and smooth interactions.
 Front-End Contribution: Assisted in developing functional components and troubleshooting UI-related bugs.
 
-GitHub Link:
+##GitHub Link##
 https://github.com/Joel-wong-al/ID_Website/blob/main/README.md
 
